@@ -9,7 +9,18 @@
 <body>
     <h1><center>Webboard DooDee</center></h1>
 <hr>
- <center>ต้องการดูกระทู้หมายเลข 3
+ <center>
+ <?php
+                $num = $_GET["id"];
+                echo "ต้องการดูกระทู้หมายเลข ".$num."<br>";
+
+                if($num%2 == 0){
+                    echo " เป็นกระทู้หมายเลขคู่ ";
+                    }  else 
+                    echo " เป็นกระทู้หมายเลขคี่";
+   
+        ?>
+        
     <br>
     <br>
  <table style = "border: 2px solid black; width: 50px">
@@ -19,6 +30,6 @@
     </table>
      </center>
     <br>
-          <center>  <a href="index.html">กลับไปหน้าหลัก</a></center>
+          <center>  <a href="index.php">กลับไปหน้าหลัก</a></center>
 </body>
 </html>

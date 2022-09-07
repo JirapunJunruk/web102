@@ -10,10 +10,21 @@
     <h1 align="center"> Webboard DooDee </h1>
     <hr>
     <div align="center">
-        เข้าสู่ระบบด้วย <br>
-        Login = <?php echo $_POST["login"];?>
+        <?php
+            $login=$_POST["login"];
+            $pwd=$_POST["pwd"];
+            if($login=="admin" && $pwd=="ad1234"){
+                echo "ยินดีต้อนรับคุณ ADMIN";
+            }
+            elseif($login=="member" && $pwd=="mem1234"){
+                echo "ยินดีต้อนรับคุณ MEMER";
+            }
+            else{
+                echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+            }
+        ?>
         <br>
-        Password = <?php echo $_POST["pwd"];?>
+      <a href="index.php">กลับไปหน้าหลัก</a>
     </div>
 </body>
 </html>
